@@ -9,8 +9,7 @@ $(document).ready(function(){
    message.text('Error')
   }
   else{
-    let t = $("<h1></h1>").text(`${text.val()}`);
-    t = $("h3").append(t.css("color", color.val()))
+    btn.after($(`<h1>${text.val()}</h1>`).css("color", color.val()));
   }
  })
 })
@@ -19,8 +18,3 @@ function isColor(color){
   s.color = color;
   return s.color == color;
 }
-
-
-
-
-
